@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>КулинарГео - Главная</title>
+  <title>КулинарГео - Рецепты</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Главная</a></li>
-        <li><a href="recipes.html">Рецепты</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="recipes.html" class="active">Рецепты</a></li>
         <li><a href="tips.html">Советы</a></li>
         <li><a href="about.html">О нас</a></li>
       </ul>
@@ -32,34 +32,65 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="decoration top-left">
-        <div class="circle"></div>
-        <div class="square"></div>
-      </div>
-      <div class="decoration bottom-right">
+    <section class="page-header">
+      <div class="decoration top-right">
         <div class="square"></div>
         <div class="circle"></div>
       </div>
       
-      <div class="hero-content">
-        <h1>Искусство <span>кулинарии</span></h1>
-        <p>Откройте для себя мир вкусных рецептов, кулинарных техник и гастрономических открытий</p>
-        <div class="hero-buttons">
-          <a href="recipes.html" class="button primary">Популярные рецепты</a>
-          <a href="about.html" class="button secondary">О проекте</a>
+      <h1>Наши <span>рецепты</span></h1>
+      <p>Коллекция изысканных блюд со всего мира</p>
+    </section>
+
+    <section class="recipe-filters">
+      <div class="filter-container">
+        <div class="filter-group">
+          <label>Категория:</label>
+          <select>
+            <option value="all">Все категории</option>
+            <option value="breakfast">Завтраки</option>
+            <option value="lunch">Обеды</option>
+            <option value="dinner">Ужины</option>
+            <option value="dessert">Десерты</option>
+            <option value="drinks">Напитки</option>
+            <option value="snacks">Закуски</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Сложность:</label>
+          <select>
+            <option value="all">Любая</option>
+            <option value="easy">Легкая</option>
+            <option value="medium">Средняя</option>
+            <option value="hard">Сложная</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Время:</label>
+          <select>
+            <option value="all">Любое</option>
+            <option value="0-30">до 30 мин</option>
+            <option value="30-60">30-60 мин</option>
+            <option value="60+">более 60 мин</option>
+          </select>
+        </div>
+        
+        <div class="filter-group search">
+          <input type="text" placeholder="Поиск рецептов...">
+          <button class="search-button">Найти</button>
         </div>
       </div>
     </section>
 
-    <section class="featured-recipes">
-      <div class="decoration center-right">
+    <section class="recipes-collection">
+      <div class="decoration center-left">
         <div class="circle"></div>
         <div class="square"></div>
       </div>
       
-      <h2>Избранные <span>рецепты</span></h2>
-      <div class="recipes-grid">
+      <div class="recipes-grid large">
         <div class="recipe-card">
           <div class="recipe-image">
             <div class="recipe-category">Итальянская кухня</div>
@@ -110,68 +141,66 @@
             <div class="recipe-difficulty">Сложная</div>
           </div>
         </div>
-      </div>
-      <div class="center-button">
-        <a href="recipes.html" class="button primary">Все рецепты</a>
-      </div>
-    </section>
 
-    <section class="categories">
-      <div class="decoration bottom-left">
-        <div class="circle"></div>
-        <div class="square"></div>
+        <div class="recipe-card">
+          <div class="recipe-image">
+            <div class="recipe-category">Французская кухня</div>
+            <div class="decoration-circle"></div>
+            <div class="decoration-square"></div>
+            <img src="https://images.unsplash.com/photo-1600803907087-f56d462fd26b?ixlib=rb-4.0.3" alt="Киш Лорен">
+          </div>
+          <div class="recipe-content">
+            <h3>Киш Лорен</h3>
+            <p>Французский открытый пирог с начинкой из яиц и сливок</p>
+          </div>
+          <div class="recipe-footer">
+            <div class="recipe-time">1 час</div>
+            <div class="recipe-difficulty">Средняя</div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-image">
+            <div class="recipe-category">Азиатская кухня</div>
+            <div class="decoration-circle"></div>
+            <div class="decoration-square"></div>
+            <img src="https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?ixlib=rb-4.0.3" alt="Суши роллы">
+          </div>
+          <div class="recipe-content">
+            <h3>Суши роллы</h3>
+            <p>Классические японские роллы с лососем и авокадо</p>
+          </div>
+          <div class="recipe-footer">
+            <div class="recipe-time">45 минут</div>
+            <div class="recipe-difficulty">Сложная</div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-image">
+            <div class="recipe-category">Выпечка</div>
+            <div class="decoration-circle"></div>
+            <div class="decoration-square"></div>
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3" alt="Яблочный штрудель">
+          </div>
+          <div class="recipe-content">
+            <h3>Яблочный штрудель</h3>
+            <p>Традиционный австрийский десерт с яблоками и корицей</p>
+          </div>
+          <div class="recipe-footer">
+            <div class="recipe-time">1.5 часа</div>
+            <div class="recipe-difficulty">Средняя</div>
+          </div>
+        </div>
       </div>
-      
-      <h2>Кулинарные <span>категории</span></h2>
-      <div class="categories-grid">
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Завтраки</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Обеды</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Ужины</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Десерты</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Напитки</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
-        <div class="category-card">
-          <div class="category-icon">
-            <div class="icon-square"></div>
-          </div>
-          <h3>Закуски</h3>
-          <p>Лучшие рецепты для вашего стола</p>
-          <a href="#">Смотреть →</a>
-        </div>
+
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span>...</span>
+        <a href="#">8</a>
+        <a href="#" class="next">Следующая →</a>
       </div>
     </section>
 
